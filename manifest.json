@@ -1,0 +1,43 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LeetCode Reps",
+  "version": "1.0.0",
+  "description": "Spaced repetition of LeetCode problems. LeetCode Helper.",
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "tabs",
+    "https://leetcode.com/",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["src/content/problems.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://leetcode.com/problemset/all/"],
+      "js": ["src/content/all.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "imgs/16x16dark.png",
+    "32": "imgs/32x32dark.png",
+    "48": "imgs/48x48dark.png",
+    "128": "imgs/128x128dark.png"
+  },
+  "browser_action": {
+    "default_popup": "./src/popup/popup.html",
+    "default_icon": {
+      "16": "imgs/16x16dark.png",
+      "32": "imgs/32x32dark.png",
+      "48": "imgs/48x48dark.png",
+      "128": "imgs/128x128dark.png"
+    }
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://cdn.jsdelivr.net/alasql/0.2/alasql.min.js 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}

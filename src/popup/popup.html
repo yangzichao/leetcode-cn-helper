@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../materialize/materialize.min.css"
+      media="screen,projection"
+    />
+    <script
+      type="text/javascript"
+      src="../materialize/materialize.min.js"
+      defer
+    ></script>
+    <link href="./popup.css" rel="stylesheet" />
+    <script src="./popup.js" type="module" defer></script>
+    <script src="../fileSaver/fileSaver.js" defer></script>
+  </head>
+
+  <nav class="nav-extended orange lighten-2">
+    <div class="nav-wrapper" id="header-on-mismatch">
+      <a
+        href="https://leetcode.com/problemset/all/"
+        target="_blank"
+        class="brand-logo"
+      >
+        Plz go to problem set
+      </a>
+    </div>
+    <div class="nav-wrapper" id="header-on-problem-set">
+      <a
+        href="https://leetcode.com/problems/random-one-question/all"
+        target="_blank"
+        class="brand-logo"
+      >
+        Pick a problem
+      </a>
+    </div>
+    <div class="nav-wrapper" id="header-on-match">
+      <a href="#" class="brand-logo">LeetCode Reps </a>
+    </div>
+  </nav>
+  <body class="body">
+    <div class="col s12" id="nav-tabs">
+      <ul class="tabs">
+        <li class="tab col s3">
+          <a
+            class="active"
+            id="go-to-current-problem"
+            href="#tab-current-problem"
+            >Current Problem</a
+          >
+        </li>
+        <li class="tab col s3">
+          <a href="#tab-todo-list" id="go-to-todo-list">Todo List</a>
+        </li>
+        <li class="tab col s3">
+          <a href="#tab-review-queue" id="go-to-review-queue">Review Queue</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="tab-current-problem" class="col s12">
+      <div id="current-problem">
+        <div id="problem-infos"></div>
+        <div>
+          <h5>&emsp;🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶</h5>
+        </div>
+        <ul class="collection">
+          <li class="collection-item valign-wrapper" id="this-attempt"></li>
+          <li class="collection-item valign-wrapper" id="add-to-todo-list"></li>
+          <li
+            class="collection-item valign-wrapper"
+            id="add-to-review-queue"
+          ></li>
+          <li
+            class="collection-item valign-wrapper"
+            id="generate-markdown"
+          ></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tab-todo-list" class="col s12">
+      <h3>&emsp;Todo List:</h3>
+      <div id="todo-list"></div>
+    </div>
+    <div id="tab-review-queue" class="col s12">
+      <h3>&emsp;Review Queue:</h3>
+      <div id="review-queue"></div>
+    </div>
+  </body>
+</html>

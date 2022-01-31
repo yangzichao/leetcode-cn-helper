@@ -1,0 +1,14 @@
+.body {
+  width: 600px;
+}
+
+.tabs .tab a,
+.tabs .tab a.active,
+.tabs .tab a:hover,
+.tabs .tab a:focus.active {
+  background-color: #ffffff;
+  color: #000000;
+}
+.tabs .indicator {
+  background-color: #f79d01;
+}
